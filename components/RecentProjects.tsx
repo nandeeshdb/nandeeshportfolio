@@ -17,6 +17,7 @@ const RecentProjects = () => {
           <div
             className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
             key={item.id}
+            
           >
             <PinContainer
               title={item.title}
@@ -24,7 +25,7 @@ const RecentProjects = () => {
             >
               <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
                 <div
-                  className="relative w-full h-full overflow-hidden lg:rounded-3xl"
+                  className="relative w-full h-full overflow-hidden lg:rounded-3xl hover:underline"
                   style={{ backgroundColor: "#13162D" }}
                 >
                   <img src="/bg.png" alt="bgimg" className="rounded-xl" />
@@ -34,13 +35,14 @@ const RecentProjects = () => {
                   alt="cover"
                   className="z-10 absolute bottom-0 w-full h-full rounded-xl object-cover"
                 />
+                
               </div>
 
-              <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
+              <a href={item.link}  className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
                 {item.title}
-              </h1>
+              </a >
 
-              <p
+              <a href={item.link}
                 className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2"
                 style={{
                   color: "#BEC1DD",
@@ -48,7 +50,7 @@ const RecentProjects = () => {
                 }}
               >
                 {item.des}
-              </p>
+              </a>
 
               <div className="flex items-center justify-between mt-7 mb-3">
                 <div className="flex items-center">

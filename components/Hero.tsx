@@ -1,5 +1,7 @@
 import { FaLocationArrow } from "react-icons/fa6";
 import { TypeAnimation } from 'react-type-animation';
+import { LuFileSpreadsheet } from "react-icons/lu";
+
 
 
 import MagicButton from "./MagicButton";
@@ -7,6 +9,15 @@ import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 
 const Hero = () => {
+  const onButtonClick = () => {
+    const pdfUrl = "https://drive.google.com/file/d/1v-oUY-rfVPatA1CPMI2bLHRWHnuBhoKy/view?usp=sharing";
+    const link = document.createElement("a");
+    link.href = pdfUrl;
+    link.download = "NandeeshDB.pdf"; // specify the filename
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};
   return (
     <div className=" pb-8 lg:pb-20 pt-36">
       {/**
@@ -66,13 +77,13 @@ const Hero = () => {
             ></TypeAnimation>
        
 
-          <a href="#about" className="my-4">
+          <div onClick={onButtonClick} className="my-4">
             <MagicButton
-              title="Show my work"
-              icon={<FaLocationArrow />}
+              title="View My Resume"
+              icon={<LuFileSpreadsheet />}
               position="right"
             />
-          </a>
+          </div>
         </div>
       </div>
     </div>
