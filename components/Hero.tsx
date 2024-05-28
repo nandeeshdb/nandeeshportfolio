@@ -10,7 +10,7 @@ import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 
 const Hero = () => {
   const onButtonClick = () => {
-    const pdfUrl = "https://drive.google.com/file/d/1v-oUY-rfVPatA1CPMI2bLHRWHnuBhoKy/view?usp=sharing";
+    const pdfUrl = "https://drive.google.com/file/d/1RpedKyK2CokHvpk92p6FeKT6ffuLNOAI/view?usp=sharing";
     const link = document.createElement("a");
     link.href = pdfUrl;
     link.download = "NandeeshDB.pdf"; // specify the filename
